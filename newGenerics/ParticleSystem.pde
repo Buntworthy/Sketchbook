@@ -39,6 +39,7 @@ class ParticleSystem{
         for(int k=p.interactions.size()-1;k>=0;k--){
         Interaction myInteraction = (Interaction) p.interactions.get(k);
         myInteraction.interact(p,q);
+        println(myInteraction.range_min);
         }
       }
     }

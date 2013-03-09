@@ -1,10 +1,3 @@
-//import processing.opengl.*;
-//import toxi.geom.*; 
-//import toxi.geom.mesh2d.*;
-//import toxi.util.*;
-//import toxi.util.datatypes.*;
-//import toxi.processing.*;
-
 ParticleSystem particles;
 
 void setup(){
@@ -91,7 +84,7 @@ class Particle{
     force = new PVector(0,0);
     speed.mult(drag);
     pos.add(speed);
-    force.add(new PVector(0,1));
+    //force.add(new PVector(0,1));
     age++;
   }
   

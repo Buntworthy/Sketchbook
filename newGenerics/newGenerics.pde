@@ -1,10 +1,3 @@
-//import processing.opengl.*;
-//import toxi.geom.*; 
-//import toxi.geom.mesh2d.*;
-//import toxi.util.*;
-//import toxi.util.datatypes.*;
-//import toxi.processing.*;
-
 ParticleSystem particles;
 
 void setup(){
@@ -13,7 +6,7 @@ void setup(){
   fill(0);
   frameRate(60);
   particles = new ParticleSystem();
-  for(int i=0;i<50;i++){
+  for(int i=0;i<2;i++){
     particles.addParticle();
   }
 }
