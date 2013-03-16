@@ -1,12 +1,12 @@
 ParticleSystem particles;
 
 void setup(){
-  size(800,400);
+  size(800,800);
   background(255);
   fill(0);
   frameRate(60);
   particles = new ParticleSystem();
-  for(int i=0;i<2;i++){
+  for(int i=0;i<100;i++){
     particles.addParticle();
   }
 }
