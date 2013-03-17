@@ -9,6 +9,7 @@ class Particle{
   boolean drawme;
   int state;
   color myColor;
+  float tStep = 0.1;
   
   Particle(PVector pos_, PVector speed_){
     pos = pos_;
@@ -20,7 +21,8 @@ class Particle{
     drawme = true;
     state = 1;
     //myColor = color(random(0,255),random(0,255),random(0,255));
-    myColor = color(0,0,255);
+    //myColor = color(0,0,255);
+    myColor = color(100*(pos.y+random(-5,5)-height/2),0,100*(pos.x-width/2));
     interactions = new ArrayList();
     Interaction myInteraction1 = new Interaction(-100,1,5000,0);
     interactions.add(myInteraction1);

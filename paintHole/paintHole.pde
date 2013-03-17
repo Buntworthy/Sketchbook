@@ -4,10 +4,11 @@ void setup(){
   size(800,800);
   background(255);
   fill(0);
-  frameRate(60);
+  //frameRate(60);
+  float rad = 10.0;
   particles = new ParticleSystem();
   for(int i=0;i<500;i++){
-    particles.addParticle();
+    particles.addParticle(new PVector(width/2+rad*cos(i),height/2+rad*sin(i)), new PVector(0,0));
   }
 }
 
