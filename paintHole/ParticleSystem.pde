@@ -1,6 +1,7 @@
 class ParticleSystem{
   ArrayList particles;
-  float radius = 10000;
+  float radius1 = 10000;
+  float radius2 = 1000000;
   
   ParticleSystem(){
     particles = new ArrayList();
@@ -59,7 +60,7 @@ class ParticleSystem{
       cent.sub(p.pos);
       //PVector temp2 = PVector.mult(temp,0.1);
       float dist = cent.magSq();
-      if (dist < radius) {
+      if (dist < radius1) {
         PVector rectify = cent;
         rectify.mult(-0.05);
         p.pos.add(rectify);
@@ -68,8 +69,8 @@ class ParticleSystem{
         cent.mult(mouseX);
         p.applyForce(cent);
         //line(width/2,height/2,p.pos.x,p.pos.y);
-      } else if (dist < radius + 50000) {
-        PVector f = PVector.mult(cent,0.01);
+      } else if (dist < radius1 + radius2) {
+        PVector f = PVector.mult(cent,0.1);
         p.applyForce(f);
         cent.rotate(PI/2);
         cent.div(0.01*cent.magSq());

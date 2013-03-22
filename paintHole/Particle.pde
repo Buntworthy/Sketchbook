@@ -16,17 +16,18 @@ class Particle{
     speed = speed_;
     force = new PVector(0,0);
     mass = 1000;
-    drag = 0.999;
+    drag = 0.99;
     age = 0;
     drawme = true;
     state = 1;
     //myColor = color(random(0,255),random(0,255),random(0,255));
     //myColor = color(0,0,255);
     myColor = color(100*(pos.y+random(-5,5)-height/2),0,100*(pos.x-width/2));
+//myColor = color(255,0,100*(pos.x-width/2));
     interactions = new ArrayList();
-    Interaction myInteraction2 = new Interaction(-5,3,10,1);
+    Interaction myInteraction2 = new Interaction(-5,3,100,1);
     interactions.add(myInteraction2);
-    Interaction myInteraction3 = new Interaction(2.5,5,30,1);
+    Interaction myInteraction3 = new Interaction(2.5,5,100,1);
     interactions.add(myInteraction3);
     
   }
@@ -56,7 +57,7 @@ class Particle{
     //fill(color(255*noise(pos.x*0.01,pos.y*0.01+(0.001*age)),0,255*speed.heading()));
     //fill(color(255*noise(pos.x*0.01,pos.y*0.01+(0.001*age)),0,255*speed.mag()));
 //    if(drawme){
-      ellipse(pos.x,pos.y,5,5);
+      ellipse(width/2+(pos.x-width/2)/10,height/2+(pos.y-height/2)/10,5,5);
 //    }
     //drawme = false;
   }

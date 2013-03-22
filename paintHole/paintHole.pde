@@ -7,13 +7,13 @@ void setup(){
   frameRate(60);
   float rad = 100.0;
   particles = new ParticleSystem();
-  for(int i=0;i<1000;i++){
+  for(int i=0;i<200;i++){
     particles.addParticle(new PVector(width/2+rad*cos(i),height/2+rad*sin(i)), new PVector(0,0));
   }
 }
 
 void draw(){
-  //background(255);
+  background(255);
   //fill(255,255,255,1);
   //rect(0,0,width,height);
   particles.update();
