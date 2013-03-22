@@ -15,8 +15,8 @@ class Particle{
     pos = pos_;
     speed = speed_;
     force = new PVector(0,0);
-    mass = 100;
-    drag = 0.9;
+    mass = 1000;
+    drag = 0.999;
     age = 0;
     drawme = true;
     state = 1;
@@ -24,11 +24,9 @@ class Particle{
     //myColor = color(0,0,255);
     myColor = color(100*(pos.y+random(-5,5)-height/2),0,100*(pos.x-width/2));
     interactions = new ArrayList();
-    Interaction myInteraction1 = new Interaction(-100,1,5000,0);
-    interactions.add(myInteraction1);
-    Interaction myInteraction2 = new Interaction(-100,5,10,1);
+    Interaction myInteraction2 = new Interaction(-5,3,10,1);
     interactions.add(myInteraction2);
-    Interaction myInteraction3 = new Interaction(2,15,50,1);
+    Interaction myInteraction3 = new Interaction(2.5,5,30,1);
     interactions.add(myInteraction3);
     
   }
@@ -40,14 +38,14 @@ class Particle{
     speed.mult(drag);
     pos.add(speed);
     //force.add(new PVector(0,1));
-    PVector temp = new PVector(width/2,height/2,0);
-    temp.sub(pos);
-    PVector temp2 = PVector.mult(temp,0.1);
-    force.add(temp2);
-    temp.rotate(PI/2);
-    
-    temp.div((0.01/mouseX)*temp.magSq());
-    force.add(temp);
+//    PVector temp = new PVector(width/2,height/2,0);
+//    temp.sub(pos);
+//    //PVector temp2 = PVector.mult(temp,0.1);
+//    force.add(temp);
+//    temp.rotate(PI/2);
+//    
+//    temp.div((0.01/mouseX)*temp.magSq());
+//    force.add(temp);
     age++;
     //line(pos.x,pos.y,pos.x+temp.x,pos.y+temp.y);
   }
@@ -57,9 +55,9 @@ class Particle{
     fill(myColor);
     //fill(color(255*noise(pos.x*0.01,pos.y*0.01+(0.001*age)),0,255*speed.heading()));
     //fill(color(255*noise(pos.x*0.01,pos.y*0.01+(0.001*age)),0,255*speed.mag()));
-    if(drawme){
+//    if(drawme){
       ellipse(pos.x,pos.y,5,5);
-    }
+//    }
     //drawme = false;
   }
   

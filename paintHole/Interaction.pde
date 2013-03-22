@@ -20,7 +20,7 @@ class Interaction{
       PVector temp = PVector.sub(themPos,mePos);
       PVector force = PVector.mult(temp,coeff/sqdist);
       if (interaction_rule == 1){me.applyForce(force);}
-      if (interaction_rule == 0){me.stateChange();}
+//      if (interaction_rule == 0){me.stateChange();}
       stroke(0,255,0);
       //line(me.pos.x,me.pos.y,them.pos.x,them.pos.y);
     }
