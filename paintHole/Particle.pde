@@ -16,7 +16,7 @@ class Particle{
     speed = speed_;
     force = new PVector(0,0);
     mass = 1000;
-    drag = 0.99;
+    drag = 0.999;
     age = 0;
     drawme = true;
     state = 1;
@@ -25,9 +25,9 @@ class Particle{
     myColor = color(100*(pos.y+random(-5,5)-height/2),0,100*(pos.x-width/2));
 //myColor = color(255,0,100*(pos.x-width/2));
     interactions = new ArrayList();
-    Interaction myInteraction2 = new Interaction(-5,3,100,1);
+    Interaction myInteraction2 = new Interaction(-50,3,100,1);
     interactions.add(myInteraction2);
-    Interaction myInteraction3 = new Interaction(2.5,5,100,1);
+    Interaction myInteraction3 = new Interaction(3,5,100,1);
     interactions.add(myInteraction3);
     
   }

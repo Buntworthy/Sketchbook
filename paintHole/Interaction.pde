@@ -18,8 +18,14 @@ class Interaction{
     float sqdist = temp1.mag();
     if ((sqdist < range_max) && (sqdist > range_min)){
       PVector temp = PVector.sub(themPos,mePos);
-      PVector force = PVector.mult(temp,coeff/sqdist);
-      if (interaction_rule == 1){me.applyForce(force);}
+      if (coeff>0){
+        PVector force = PVector.mult(temp,coeff/(sqdist));
+        me.applyForce(force);
+      } else {
+        PVector force = PVector.mult(temp,coeff/(sqdist*sqdist));
+        me.applyForce(force);
+      }
+//      if (interaction_rule == 1){}
 //      if (interaction_rule == 0){me.stateChange();}
       stroke(0,255,0);
       //line(me.pos.x,me.pos.y,them.pos.x,them.pos.y);
