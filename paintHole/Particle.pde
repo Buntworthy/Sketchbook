@@ -22,12 +22,12 @@ class Particle{
     state = 1;
     //myColor = color(random(0,255),random(0,255),random(0,255));
     //myColor = color(0,0,255);
-    myColor = color(100*(pos.y+random(-5,5)-height/2),0,100*(pos.x-width/2));
+    myColor = color(100*(pos.y+random(-5,5)-height/2),55,100*(pos.x-width/2));
 //myColor = color(255,0,100*(pos.x-width/2));
     interactions = new ArrayList();
-    Interaction myInteraction2 = new Interaction(-50,3,100,1);
+    Interaction myInteraction2 = new Interaction(-50,3,10,1);
     interactions.add(myInteraction2);
-    Interaction myInteraction3 = new Interaction(3,5,100,1);
+    Interaction myInteraction3 = new Interaction(5,5,200,1);
     interactions.add(myInteraction3);
     
   }
