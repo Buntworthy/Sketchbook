@@ -14,7 +14,7 @@ void setup(){
       fill(0,10);
       pos[i] = new PVector();
       posx += r*(noise(0.1*(-i+100*j))-0.5);
-      posy += r*(noise(1000*posx+j,0.1*i)-0.5);
+      posy += r*(noise(j,0.1*i)-0.5);
       pos[i].set(posx,posy,0);
       
       ellipse(pos[i].x,pos[i].y,1.5*s,1.5*s);
