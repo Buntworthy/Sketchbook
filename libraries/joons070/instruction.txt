@@ -1,0 +1,3 @@
+Copy & paste the "joons" folder into your Processing's "libraries" folder, as is, entirely, and don't change the name of anything.
+
+Enjoy :)

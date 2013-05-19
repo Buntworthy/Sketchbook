@@ -29,5 +29,14 @@ void setup() {
 
 }
 
+void draw(){
+}
+
+void keyPressed() {
+  if (key == 's') {
+    save("screen.tif");
+  }
+}
+
 
 

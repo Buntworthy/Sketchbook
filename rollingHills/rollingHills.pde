@@ -7,7 +7,7 @@ void setup() {
   background(255);
   fill(255);
   translate(0, 0);
-  stroke(80,25,50,40);
+  stroke(50,155,80,40);
   background(255);
   for (int j=0;j<100;j++) {
     //fill(100, 200*random(0,1), 120, 10);
@@ -26,8 +26,15 @@ void setup() {
     popMatrix();
     time = 0;
   }
-  
+ 
+}
 
+void draw(){
+}
+void keyPressed() {
+  if (key == 's') {
+    save("screen.tif");
+  }
 }
 
 
